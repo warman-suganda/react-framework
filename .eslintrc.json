@@ -24,13 +24,29 @@
   "plugins": ["react", "prettier", "module-resolver"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": [
+      "warn",
+      {
+        "html": "ignore",
+        "custom": "ignore",
+        "explicitSpread": "ignore",
+        "exceptions": [
+          "src"
+        ]
+      }
+    ]
   },
   "settings": {
     "import/resolver": {
       "eslint-import-resolver-custom-alias": {
         "alias": {
-          "@components": "src/components"
+          "@components": "src/components",
+          "@containers": "src/containers",
+          "@services/*": "src/services/*",
+          "@utils/*": "src/utils/*"
         },
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
@@ -67,6 +83,18 @@
         "react/require-default-props": "off",
         "@next/next/no-img-element": "off",
         "no-restricted-imports": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-props-no-spreading": [
+          "warn",
+          {
+            "html": "ignore",
+            "custom": "ignore",
+            "explicitSpread": "ignore",
+            "exceptions": [
+              "src"
+            ]
+          }
+        ],
         "@typescript-eslint/no-restricted-imports": [
           "warn",
           {
