@@ -45,8 +45,8 @@
         "alias": {
           "@components": "src/components",
           "@containers": "src/containers",
-          "@services/*": "src/services/*",
-          "@utils/*": "src/utils/*"
+          "@services": "src/services",
+          "@utils": "src/utils"
         },
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
