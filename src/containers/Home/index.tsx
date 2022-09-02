@@ -24,7 +24,7 @@ function Home() {
       <Title>Welcome to Next.js</Title>
       <TodoList>
         {data.map((item) => (
-          <Card>{item.title}</Card>
+          <Card key={item.id}>{item.title}</Card>
         ))}
       </TodoList>
     </HomeWrapper>
