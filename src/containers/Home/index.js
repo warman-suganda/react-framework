@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Todo, getTodos } from '@services/todo';
+import { getTodos } from '@services/todo';
 import Card from '@components/Card';
 import { HomeWrapper, Title, TodoList } from './sytles';
 
 function Home() {
-  const [data, setData] = useState<Todo[]>([]);
+  const [data, setData] = useState([]);
 
   const fetchTodo = async () => {
     try {
